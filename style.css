@@ -3,3 +3,36 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body,
+html {
+  min-height: 100vh;
+}
+
+
+/* Nav bar */
+.nav-bar, 
+.nav-right {
+  display: flex;
+}
+
+.nav-right > .nav-item {
+  margin-left: 1rem;
+}
+
+.nav-bar {
+  justify-content: space-between;
+  max-width: 1200px;
+  flex-grow: 1;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  padding: .7rem;
+}
