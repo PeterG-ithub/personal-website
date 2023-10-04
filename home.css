@@ -12,7 +12,7 @@ body {
 
 .card {
   width: 300px;
-  height: 422px;
+  height: 490px;
   transition: transform 0.7s;
   transform-style: preserve-3d;
 }
@@ -21,25 +21,77 @@ body {
   transform: rotateY(180deg);
 }
 
-.front,
-.back {
+.ce-front,
+.ce-back,
+.fs-front,
+.fs-back,
+.ai-back,
+.ai-front {
   position: absolute;
   border: 1px solid black;
   border-radius: 1.3rem;
   width: 300px;
-  height: 422px;
+  height: 490px;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
-.back {
-  background-image: url("images/card-back.png");
+.ce-back,
+.fs-back,
+.ai-back {
+ 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   /*transform: rotateY(180deg);*/
 }
 
-.front {
-  background-color: rgb(255, 255, 255);
-  transform: rotateY(180deg);
+.ce-back {
+  background-image: url("images/ce-back.png");
 }
+
+.fs-back {
+  background-image: url("images/fs-back.png");
+}
+
+.ai-back {
+  background-image: url("images/ai-back.png");
+}
+
+.ce-front,
+.fs-front,
+.ai-front {
+  transform: rotateY(180deg);
+  background-image: url("images/front-template.png");
+  background-size: cover;
+  background-color:#bebcc1;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+div > p {
+  text-align: center;
+  font-size: 1.7rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 1rem;
+}
+
+.card-info {
+  margin-top: 1rem;
+}
+
+.read-more {
+  position: absolute;
+  bottom: 30px;
+  right: 25px
+}
+
+/* .ce-front {
+  background-image: url("images/ce-front.png");
+}
+
+.fs-front {
+  background-image: url("images/fs-front.png");
+}
+ */
